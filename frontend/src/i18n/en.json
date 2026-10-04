@@ -41,7 +41,8 @@
     "about": "About",
     "contact": "Contact",
     "openMenu": "Open menu",
-    "closeMenu": "Close menu"
+    "closeMenu": "Close menu",
+    "lightMode": "Light mode"
   },
   "contact": {
     "title": "Contact",

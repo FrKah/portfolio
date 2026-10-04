@@ -39,7 +39,7 @@
 @plugin "daisyui/theme" {
   name: "my_dark";
   default: false;
-  prefersdark: true;
+  prefersdark: false; /* applied from the browser preference in index.html */
   color-scheme: "dark";
   --color-base-100: oklch(0% 0 0);
   --color-base-200: oklch(14% 0 0);

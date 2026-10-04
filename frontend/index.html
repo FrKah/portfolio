@@ -2,6 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      // pick the theme before first paint so dark browsers don't flash light;
+      // Navbar keeps it in sync afterwards
+      document.documentElement.setAttribute(
+        "data-theme",
+        matchMedia("(prefers-color-scheme: dark)").matches ? "my_dark" : "mylight"
+      );
+    </script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"

@@ -8,12 +8,29 @@ const links = [
   { to: "/contact", label: "navbar.contact" },
 ];
 
+// daisyUI theme names, see index.css
+type Theme = "mylight" | "my_dark";
+const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+const systemTheme = (): Theme => (darkQuery.matches ? "my_dark" : "mylight");
+
 const Navbar = () => {
   const { t, i18n } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [theme, setTheme] = useState<Theme>(systemTheme);
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
   };
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
+
+  // follow the browser if its light/dark preference changes
+  useEffect(() => {
+    const onChange = () => setTheme(systemTheme());
+    darkQuery.addEventListener("change", onChange);
+    return () => darkQuery.removeEventListener("change", onChange);
+  }, []);
 
   // close the mobile menu with Escape
   useEffect(() => {
@@ -59,7 +76,13 @@ const Navbar = () => {
           </select>
         </div>
         <label className="toggle text-base-content">
-          <input type="checkbox" value="mylight" className="theme-controller" />
+          {/* checked = light (sun), unchecked = dark (moon) */}
+          <input
+            type="checkbox"
+            aria-label={t("navbar.lightMode")}
+            checked={theme === "mylight"}
+            onChange={(e) => setTheme(e.target.checked ? "mylight" : "my_dark")}
+          />
 
           <svg
             aria-label="moon"
