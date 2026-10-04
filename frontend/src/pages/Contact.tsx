@@ -29,12 +29,24 @@ function Contact() {
         <div className="space-y-2">
           <p className="text-lg">{t('contact.linkedinTitle')}</p>
           <a
-            href="https://www.linkedin.com/in/fr%C3%A9d%C3%A9ric-kah-7213a1354/"
+            href="https://www.linkedin.com/in/frederic-kah-7213a1354"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center text-primary hover:underline"
           >
             {t('contact.linkedinBtn')}
+          </a>
+        </div>
+
+        <div className="space-y-2">
+          <p className="text-lg">{t('contact.githubTitle')}</p>
+          <a
+            href="https://github.com/FrKah"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center text-primary hover:underline"
+          >
+            {t('contact.githubBtn')}
           </a>
         </div>
       </div>

@@ -45,7 +45,9 @@
     "studentEmail": "Frederic.Kah@eurecom.fr - my student email address",
     "proEmail": "frederic.kah.ing@gmail.com - my professional email address",
     "linkedinTitle": "Find me on LinkedIn:",
-    "linkedinBtn": "My LinkedIn profile"
+    "linkedinBtn": "My LinkedIn profile",
+    "githubTitle": "Find my code on GitHub:",
+    "githubBtn": "My GitHub profile"
   },
   "footer": {
     "copyright": "© {{year}} Frédéric Kah. All rights reserved.",
