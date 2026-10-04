@@ -38,6 +38,6 @@
     "vite-plugin-gh-pages": "^1.0.1"
   },
   "vite": {
-    "base": "/webdev_site_portfolio/"
+    "base": "/portfolio/"
   }
 }

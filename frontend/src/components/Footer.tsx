@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="max-w-4xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
         <p>{t("footer.copyright", { year: new Date().getFullYear() })}</p>
         <div className="flex gap-4">
-          <Link to="/webdev_site_portfolio" className="hover:text-primary">
+          <Link to="/" className="hover:text-primary">
             {t("footer.home")}
           </Link>
           <Link to="/projects" className="hover:text-primary">
