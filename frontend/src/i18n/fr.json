@@ -39,7 +39,9 @@
     "home": "Accueil",
     "projects": "Projets",
     "about": "À propos",
-    "contact": "Contact"
+    "contact": "Contact",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu"
   },
   "contact": {
     "title": "Contact",

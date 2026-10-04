@@ -1,13 +1,30 @@
+import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router";
 import { useTranslation } from "react-i18next";
 
+const links = [
+  { to: "/", label: "navbar.home" },
+  { to: "/projects", label: "navbar.projects" },
+  { to: "/contact", label: "navbar.contact" },
+];
+
 const Navbar = () => {
   const { t, i18n } = useTranslation();
+  const [menuOpen, setMenuOpen] = useState(false);
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
   };
+
+  // close the mobile menu with Escape
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setMenuOpen(false);
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [menuOpen]);
+
   return (
-    <div className="navbar bg-base-200 shadow-sm">
+    <div className="navbar relative bg-base-200 shadow-sm">
       <div className="navbar-start">
         <Link to="/" className="btn btn-ghost normal-case text-xl">
           Frédéric Kah
@@ -17,30 +34,16 @@ const Navbar = () => {
       {/* Desktop Menu */}
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal text-xl">
-          <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) => (isActive ? "active font-bold" : "")}
-            >
-              {t("navbar.home")}
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/projects"
-              className={({ isActive }) => (isActive ? "active font-bold" : "")}
-            >
-              {t("navbar.projects")}
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/contact"
-              className={({ isActive }) => (isActive ? "active font-bold" : "")}
-            >
-              {t("navbar.contact")}
-            </NavLink>
-          </li>
+          {links.map(({ to, label }) => (
+            <li key={to}>
+              <NavLink
+                to={to}
+                className={({ isActive }) => (isActive ? "active font-bold" : "")}
+              >
+                {t(label)}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </div>
       <div className="navbar-end">
@@ -100,53 +103,49 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className="lg:hidden dropdown dropdown-end">
-        <label tabIndex={0} className="btn btn-ghost lg:hidden">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </label>
-        <ul
-          tabIndex={0}
-          className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+      <button
+        type="button"
+        className="btn btn-ghost btn-square lg:hidden"
+        aria-label={menuOpen ? t("navbar.closeMenu") : t("navbar.openMenu")}
+        aria-expanded={menuOpen}
+        aria-controls="mobile-menu"
+        onClick={() => setMenuOpen((open) => !open)}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-7 w-7"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
         >
-          <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) => (isActive ? "active font-bold" : "")}
-            >
-              {t("navbar.home")}
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/projects"
-              className={({ isActive }) => (isActive ? "active font-bold" : "")}
-            >
-              {t("navbar.projects")}
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/contact"
-              className={({ isActive }) => (isActive ? "active font-bold" : "")}
-            >
-              {t("navbar.contact")}
-            </NavLink>
-          </li>
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d={menuOpen ? "M6 6l12 12M18 6L6 18" : "M4 6h16M4 12h16M4 18h16"}
+          />
+        </svg>
+      </button>
+      {menuOpen && (
+        <ul
+          id="mobile-menu"
+          className="menu lg:hidden absolute left-0 right-0 top-full z-50 w-full p-2 text-lg bg-base-200 border-t border-base-300 shadow-md"
+        >
+          {links.map(({ to, label }) => (
+            <li key={to}>
+              <NavLink
+                to={to}
+                onClick={() => setMenuOpen(false)}
+                className={({ isActive }) =>
+                  `py-3 ${isActive ? "active font-bold" : ""}`
+                }
+              >
+                {t(label)}
+              </NavLink>
+            </li>
+          ))}
         </ul>
-      </div>
+      )}
     </div>
   );
 };
