@@ -9,7 +9,7 @@ function Home() {
   return (
     <>
       <div className="min-h-[calc(100vh-64px)] flex flex-row items-center justify-center">
-        <div className="grid grid-cols-1 lg:grid-cols-2 max-w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] max-w-full">
           {/* Image à gauche */}
           <div className="flex p-8 flex-col justify-center items-center">
             <img
@@ -22,12 +22,14 @@ function Home() {
 
           {/* Texte + bouton à droite */}
           <div className="flex flex-col justify-center items-center px-8 animate-fadeInRight">
-            <h1 className="text-6xl font-bold">{t("home.name")}</h1>
-            <p className="mt-4 text-xl max-w-2xl text-center md:text-right">
-              {t("home.title")}
+            <h1 className="text-6xl font-bold text-center">{t("home.name")}</h1>
+            <p className="mt-4 text-xl text-center">
+              <span className="block text-balance">{t("home.title")}</span>
+              <span className="block text-balance">{t("home.focus")}</span>
             </p>
-            <p className="mt-2 max-w-2xl text-center md:text-right opacity-70">
-              {t("home.subtitle")}
+            <p className="mt-2 text-center opacity-70">
+              <span className="block text-balance">{t("home.subtitle")}</span>
+              <span className="block text-balance">{t("home.subtitleFocus")}</span>
             </p>
 
             {/* Bouton */}

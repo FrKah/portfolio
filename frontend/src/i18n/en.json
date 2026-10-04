@@ -23,8 +23,10 @@
   "home": {
     "imgAlt": "Frédéric Kah",
     "name": "Frédéric Kah",
-    "title": "Engineering student in embedded systems: GPU programming, performance optimisation and hardware design",
-    "subtitle": "Looking for a 6-month end-of-studies internship in Paris from February 2027, in GPU/CPU performance or systems engineering.",
+    "title": "Engineering student in embedded systems",
+    "focus": "GPU programming, performance optimisation and hardware design",
+    "subtitle": "Looking for a 6-month end-of-studies internship in Paris from February 2027,",
+    "subtitleFocus": "in GPU/CPU performance or systems engineering.",
     "projectsBtn": "See my projects",
     "cvBtn": "Download my CV",
     "contactBtn": "Contact me",
