@@ -81,7 +81,7 @@ function Home() {
         className="min-h-screen flex flex-row items-center justify-center"
       >
         <div className="flex max-w-6xl p-8 flex-col mx-auto items-center space-y-16">
-          <h2 className="items-start text-5xl md:text-6xl font-bold">
+          <h2 className="items-start text-4xl sm:text-5xl md:text-6xl font-bold">
             {t("home.skillsTitle")}
           </h2>
           <div className="text-center">
@@ -95,7 +95,7 @@ function Home() {
       >
         <div className="items-start justify-center p-8">
           <div className="w-full max-w-6xl flex flex-col items-center space-y-16">
-            <h2 className="items-start text-5xl md:text-6xl font-bold">
+            <h2 className="items-start text-4xl sm:text-5xl md:text-6xl font-bold">
               {t("home.formationTitle")}
             </h2>
             <EducationTimeline />

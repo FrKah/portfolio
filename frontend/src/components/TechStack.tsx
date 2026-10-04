@@ -46,7 +46,7 @@ const TechStack = () => {
       {/* Languages */}
       <div>
         <h2 className="text-3xl font-semibold mb-4">{t('techstack.languagesTitle')}</h2>
-        <div className="grid w-fit mx-auto grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-4">
+        <div className="grid w-fit mx-auto grid-cols-2 min-[400px]:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-4">
           {languages.map((t) => (
             <TechnologyCard key={t.name} {...t} />
           ))}
@@ -56,7 +56,7 @@ const TechStack = () => {
       {/* Technologies */}
       <div>
         <h2 className="text-3xl font-semibold mb-4">{t('techstack.technologiesTitle')}</h2>
-        <div className="grid w-fit mx-auto grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
+        <div className="grid w-fit mx-auto grid-cols-2 min-[400px]:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
           {technologies.map((t) => (
             <TechnologyCard key={t.name} {...t} />
           ))}
