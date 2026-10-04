@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 
 type ProjectCardProps = {
   title: string;
+  subtitle?: string;
   description: React.ReactNode;
   githubUrl?: string;
   downloadUrl?: string;
@@ -17,6 +18,7 @@ type ProjectCardProps = {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
+  subtitle,
   description,
   githubUrl,
   downloadUrl,
@@ -33,12 +35,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       {/* Header / description */}
       <div>
         <h2 className="text-3xl font-semibold">{title}</h2>
-        <div className="text-base mt-3 prose prose-neutral max-w-none">
+        {subtitle && <p className="mt-1 text-sm italic opacity-70">{subtitle}</p>}
+        <div className="text-base mt-3 prose prose-neutral max-w-none [&_code]:border-0! [&_code]:bg-base-content/10! [&_code]:px-1! [&_code]:text-[0.9em]">
           {description}
         </div>
 
         {/* Buttons pinned below title+desc on wide cards: keep here, layout above centers the card */}
-        <div className="mt-6 flex gap-4">
+        <div className="mt-6 flex flex-wrap gap-4">
           {githubUrl && (
             <a
               href={githubUrl}

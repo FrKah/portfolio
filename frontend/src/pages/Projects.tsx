@@ -14,6 +14,74 @@ function Projects() {
       <h1 className="text-3xl text-center font-bold">{t("projects.title")}</h1>
 
       <ProjectCard
+        title={t("projects.gemm.title")}
+        subtitle={t("projects.gemm.subtitle")}
+        description={
+          <span
+            dangerouslySetInnerHTML={{
+              __html: t("projects.gemm.description"),
+            }}
+          />
+        }
+        githubUrl="https://github.com/Surypp/gemm"
+        skills={["CUDA", "PTX", "HIP", "C++", "Nsight Compute"]}
+      />
+
+      <ProjectCard
+        title={t("projects.oligoarchive.title")}
+        subtitle={t("projects.oligoarchive.subtitle")}
+        description={
+          <span
+            dangerouslySetInnerHTML={{
+              __html: t("projects.oligoarchive.description"),
+            }}
+          />
+        }
+        websiteLink="https://oligoarchive.github.io/"
+        skills={["CUDA", "C++", "TBB"]}
+      />
+
+      <ProjectCard
+        title={t("projects.fuzzing.title")}
+        subtitle={t("projects.fuzzing.subtitle")}
+        description={
+          <span
+            dangerouslySetInnerHTML={{
+              __html: t("projects.fuzzing.description"),
+            }}
+          />
+        }
+        githubUrl="https://github.com/AFLplusplus/LibAFL/pull/3845"
+        skills={["Rust", "C", "Python", "LibAFL", "QEMU", "Intel PT"]}
+      />
+
+      <ProjectCard
+        title={t("projects.tpu.title")}
+        subtitle={t("projects.tpu.subtitle")}
+        description={
+          <span
+            dangerouslySetInnerHTML={{
+              __html: t("projects.tpu.description"),
+            }}
+          />
+        }
+        skills={["Chisel", "Scala", "FPGA"]}
+      />
+
+      <ProjectCard
+        title={t("projects.sqlrewriter.title")}
+        subtitle={t("projects.sqlrewriter.subtitle")}
+        description={
+          <span
+            dangerouslySetInnerHTML={{
+              __html: t("projects.sqlrewriter.description"),
+            }}
+          />
+        }
+        skills={["Python", "SQL Oracle", "PostgreSQL", "HTML", "CSS", "JavaScript"]}
+      />
+
+      <ProjectCard
         title={t("projects.volley.title")}
         description={
           <span
@@ -46,8 +114,8 @@ function Projects() {
             }}
           />
         }
-        githubUrl="https://github.com/FrKah/SiteVolleyASIE"
-        websiteLink="https://frkah.github.io/webdev_site_portfolio"
+        githubUrl="https://github.com/FrKah/portfolio"
+        websiteLink="https://frkah.github.io/portfolio/"
         skills={[
           "Javascript",
           "Typescript",
@@ -56,18 +124,6 @@ function Projects() {
           "DaisyUI",
           "Git",
         ]}
-      />
-
-      <ProjectCard
-        title={t("projects.sqlrewriter.title")}
-        description={
-          <span
-            dangerouslySetInnerHTML={{
-              __html: t("projects.sqlrewriter.description"),
-            }}
-          />
-        }
-        skills={["Python", "SQL Oracle", "HTML", "CSS", "JavaScript"]}
       />
 
       <ProjectCard
@@ -94,11 +150,7 @@ function Projects() {
           />
         }
         images={[gauntlet1, gauntlet2, gauntlet3]}
-        skills={[
-          "Python",
-          "Blender API (pour générer un dataset synthétique",
-          "YoloV5",
-        ]}
+        skills={["Python", "Blender", "YOLOv5"]}
       />
     </div>
   );
