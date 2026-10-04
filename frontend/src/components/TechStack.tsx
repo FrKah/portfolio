@@ -1,24 +1,41 @@
 import TechnologyCard from "./TechnologyCard";
+import { getTech } from "../data/tech";
 
 const languages = [
-  { name: "Python", icon: "devicon-python-plain colored" },
-  { name: "JavaScript", icon: "devicon-javascript-plain colored" },
-  { name: "TypeScript", icon: "devicon-typescript-plain colored" },
-  { name: "C", icon: "devicon-c-plain colored" },
-  { name: "C++", icon: "devicon-cplusplus-plain colored" },
-  { name: "C#", icon: "devicon-csharp-plain colored" },
-  { name: "GDScript", icon: "devicon-godot-plain colored" }, // Godot icon as proxy
-];
+  "C",
+  "C++",
+  "Rust",
+  "Python",
+  "Scala",
+  "RISC-V Assembly",
+  "Haskell",
+  "OCaml",
+].map(getTech);
 
 const technologies = [
-  { name: "React", icon: "devicon-react-original colored" },
-  { name: "React Native", icon: "devicon-react-original colored" }, // reuse React icon
-  { name: "TailwindCSS", icon: "devicon-tailwindcss-plain colored" },
-  { name: "SQL", icon: "devicon-mysql-plain colored" }, // generic SQL
-  { name: "Express", icon: "devicon-express-original" }, // often monochrome
-  { name: "Node.js", icon: "devicon-nodejs-plain colored" },
-  { name: "Git", icon: "devicon-git-plain colored" },
-];
+  // GPU & performance
+  "CUDA",
+  "HIP/ROCm",
+  "PTX",
+  "MPI",
+  "Nsight Compute",
+  "perf",
+  // Hardware
+  "Chisel",
+  "VHDL",
+  "FPGA",
+  // Systems
+  "Linux",
+  "Windows",
+  "QEMU",
+  "Intel PT",
+  "LibAFL",
+  // Tools
+  "Git",
+  "CMake",
+  "Docker",
+  "LaTeX",
+].map(getTech);
 
 import { useTranslation } from "react-i18next";
 
@@ -29,9 +46,9 @@ const TechStack = () => {
       {/* Languages */}
       <div>
         <h2 className="text-3xl font-semibold mb-4">{t('techstack.languagesTitle')}</h2>
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-4 justify-items-center">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-8 gap-4 justify-items-center">
           {languages.map((t) => (
-            <TechnologyCard key={t.name} name={t.name} iconClass={t.icon} />
+            <TechnologyCard key={t.name} {...t} />
           ))}
         </div>
       </div>
@@ -39,9 +56,9 @@ const TechStack = () => {
       {/* Technologies */}
       <div>
         <h2 className="text-3xl font-semibold mb-4">{t('techstack.technologiesTitle')}</h2>
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-4 justify-items-center">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4 justify-items-center">
           {technologies.map((t) => (
-            <TechnologyCard key={t.name} name={t.name} iconClass={t.icon} />
+            <TechnologyCard key={t.name} {...t} />
           ))}
         </div>
       </div>
