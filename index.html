@@ -2,6 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      // pick the theme before first paint so dark browsers don't flash light;
+      // Navbar keeps it in sync afterwards
+      document.documentElement.setAttribute(
+        "data-theme",
+        matchMedia("(prefers-color-scheme: dark)").matches ? "my_dark" : "mylight"
+      );
+    </script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
@@ -10,8 +18,8 @@
     <link rel="icon" type="image/svg+xml" href="/portfolio/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Developer Portfolio of Frédéric Kah</title>
-    <script type="module" crossorigin src="/portfolio/assets/index-CduuKGno.js"></script>
-    <link rel="stylesheet" crossorigin href="/portfolio/assets/index-BrO0CwL8.css">
+    <script type="module" crossorigin src="/portfolio/assets/index-BUn01izk.js"></script>
+    <link rel="stylesheet" crossorigin href="/portfolio/assets/index-BZDEnv2s.css">
   </head>
   <body>
     <div id="root"></div>
