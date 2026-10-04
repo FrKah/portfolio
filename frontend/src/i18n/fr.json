@@ -6,19 +6,25 @@
   "education": {
     "0": {
       "period": "2022 – 2024",
-      "title": "Lycée Charlemagne – CPGE MP",
-      "description": "Classes préparatoires aux grandes écoles – Mathématiques et Physique (filière MP)."
+      "title": "Lycée Charlemagne – CPGE MPSI / MP",
+      "description": "Classes préparatoires aux grandes écoles à Paris – Mathématiques et Physique (MPSI puis MP)."
     },
     "1": {
       "period": "2024 – Aujourd’hui",
       "title": "EURECOM – École d’ingénieur",
-      "description": "Étudiant en ingénierie informatique, spécialisation en systèmes embarqués et intelligence artificielle."
+      "description": "Diplôme d’ingénieur (niveau master), spécialisation systèmes embarqués. Cours suivis : architecture des ordinateurs, systèmes d’exploitation, systèmes numériques & intégration HW/SW, systèmes de gestion de bases de données, systèmes distribués. Diplôme prévu en septembre 2027."
+    },
+    "2": {
+      "period": "Sept. 2026 – Janv. 2027",
+      "title": "DTU – Semestre d’échange",
+      "description": "Université technique du Danemark, Copenhague. Choisi pour développer mes compétences en calcul haute performance, architectures parallèles et conception matérielle. Cours : agile hardware design, high-performance computing, parallel computers, large-scale modelling."
     }
   },
   "home": {
     "imgAlt": "Frédéric Kah",
     "name": "Frédéric Kah",
-    "title": "Ingénieur logiciel full-stack",
+    "title": "Étudiant ingénieur en systèmes embarqués : programmation GPU, optimisation de performances et conception matérielle",
+    "subtitle": "À la recherche d’un stage de fin d’études de 6 mois à Paris à partir de février 2027, en performance GPU/CPU ou ingénierie système.",
     "projectsBtn": "Voir mes projets",
     "cvBtn": "Télécharger mon CV",
     "contactBtn": "Me Contacter",
@@ -55,7 +61,6 @@
     "volley": {
       "title": "Site de l'association de volley inter-entreprises de Sophia Antipolis (A.S.I.E volley)",
       "description": "<p>Dans le cadre d’un projet de refonte, j’ai modernisé le site officiel de l’Association Sportive Inter-Entreprises de Sophia Antipolis (A.S.I.E.), dédié à l’organisation de leur compétition annuelle de volley-ball.</p><p>Le site original, développé en PHP, souffrait d’une structure vieillissante et d’un design peu adapté aux usages actuels. J’ai donc entrepris une refonte complète, en repensant à la fois l’interface et les fonctionnalités pour répondre aux besoins réels des joueurs et organisateurs.</p><p>Ce projet m’a permis d’aborder plusieurs axes techniques importants :</p><ul class='list-disc list-inside ml-4 mb-2'><li><strong>Authentification sécurisée :</strong> mise en place d’un système de connexion basé sur le <em>React Context</em> côté frontend et validation des mots de passe directement par le backend (Node.js + MySQL), garantissant une gestion robuste des utilisateurs.</li><li><strong>Expérience utilisateur :</strong> conception d’une interface intuitive et responsive, testée sur différents formats d’écrans (smartphones et ordinateurs), pour fluidifier la réservation de terrains et la consultation des informations de championnat.</li><li><strong>Collaboration client :</strong> échanges réguliers avec le président de la section volley afin de comprendre ses besoins, lui présenter des versions intermédiaires, et ajuster le développement en fonction de sa vision.</li></ul><p>Enfin, le projet a aussi été une bonne opportunité pour travailler sur le déploiement multi-plateforme à travers des services gratuits et performants (Vercel pour le frontend, Render pour le backend, Aiven pour la base MySQL).</p><p>Ce travail m’a permis d’approfondir mes compétences en <strong>refonte d’applications web</strong>, <strong>authentification sécurisée</strong>, <strong>UX design</strong> et <strong>gestion de projet avec un client réel</strong>.</p>"
-
     },
     "portfolio": {
       "title": "Mon portfolio",

@@ -6,19 +6,25 @@
   "education": {
     "0": {
       "period": "2022 – 2024",
-      "title": "Lycée Charlemagne – CPGE MP",
-      "description": "Preparatory classes for grandes écoles – Mathematics and Physics (MP track)."
+      "title": "Lycée Charlemagne – CPGE MPSI / MP",
+      "description": "Preparatory classes for grandes écoles in Paris – Mathematics and Physics (MPSI then MP)."
     },
     "1": {
       "period": "2024 – Present",
       "title": "EURECOM – Engineering School",
-      "description": "Computer engineering student, specializing in embedded systems and artificial intelligence."
+      "description": "Engineering degree (Master level), specialising in embedded systems. Relevant courses: computer architecture, operating systems, digital systems & HW/SW integration, database management systems, distributed systems. Expected graduation: September 2027."
+    },
+    "2": {
+      "period": "Sept. 2026 – Jan. 2027",
+      "title": "DTU – Exchange Semester",
+      "description": "Technical University of Denmark, Copenhagen. Chosen to build skills in high-performance computing, parallel architectures and hardware design. Courses: agile hardware design, high-performance computing, parallel computers, large-scale modelling."
     }
   },
   "home": {
     "imgAlt": "Frédéric Kah",
     "name": "Frédéric Kah",
-    "title": "Full-stack Software Engineer",
+    "title": "Engineering student in embedded systems: GPU programming, performance optimisation and hardware design",
+    "subtitle": "Looking for a 6-month end-of-studies internship in Paris from February 2027, in GPU/CPU performance or systems engineering.",
     "projectsBtn": "See my projects",
     "cvBtn": "Download my CV",
     "contactBtn": "Contact me",
@@ -55,7 +61,6 @@
     "volley": {
       "title": "Website for Sophia Antipolis Inter-company Volleyball Association (A.S.I.E volley)",
       "description": "<p>As part of a redesign project, I modernized the official website of the Association Sportive Inter-Entreprises de Sophia Antipolis (A.S.I.E.), dedicated to organizing their annual volleyball competition. The original site, built in PHP, suffered from an outdated structure and a design no longer suited to current needs. I therefore undertook a full redesign, rethinking both the interface and the features to better meet the expectations of players and organizers.</p><p>This project allowed me to work on several key aspects:</p><ul class='list-disc list-inside ml-4 mb-2'><li><strong>Secure authentication:</strong> implementation of a login system based on <em>React Context</em> on the frontend with password validation handled directly by the backend (Node.js + MySQL), ensuring robust user management.</li><li><strong>User experience:</strong> design of an intuitive and responsive interface tested across different screen sizes (smartphones and desktops), streamlining court reservations and championship information access.</li><li><strong>Client collaboration:</strong> regular discussions with the head of the volleyball section to understand his needs, present intermediate builds, and adjust development to match his vision.</li></ul><p>Finally, this project was also an opportunity to work on multi-platform deployment using free and reliable services (Vercel for the frontend, Render for the backend, Aiven for the MySQL database).</p><p>Through this work, I strengthened my skills in <strong>web app redesign</strong>, <strong>secure authentication</strong>, <strong>UX design</strong>, and <strong>project management with a real client</strong>.</p>"
-
     },
     "portfolio": {
       "title": "My Portfolio",

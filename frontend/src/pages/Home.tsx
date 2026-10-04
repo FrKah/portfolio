@@ -21,10 +21,13 @@ function Home() {
           </div>
 
           {/* Texte + bouton à droite */}
-          <div className="flex flex-col justify-center items-center animate-fadeInRight">
+          <div className="flex flex-col justify-center items-center px-8 animate-fadeInRight">
             <h1 className="text-6xl font-bold">{t("home.name")}</h1>
             <p className="mt-4 text-xl max-w-2xl text-center md:text-right">
               {t("home.title")}
+            </p>
+            <p className="mt-2 max-w-2xl text-center md:text-right opacity-70">
+              {t("home.subtitle")}
             </p>
 
             {/* Bouton */}
